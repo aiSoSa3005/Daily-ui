@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.hero-image img {
+  flex: 1;
+  overflow: hidden;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZvbGxvd3xlbnwwfHx8fDE2OTY5NTQ1NzE&ixlib=rb-4.0.3&q=80&w=1080");
+  height: 90vh;
+}
+
+/* Description block */
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.description h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.description p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #878b8c;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  padding: 2rem;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Form itself */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Input groups */
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Make “single-input” groups span full width of their parent */
+.single-input {
+  width: 100%;
+}
+
+/* Shared input styles */
+.form-input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+/* Simple submit button */
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 30px 0;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+@media screen and (min-width: 1068px) {
+  .hero-image img {
+    display: flex;
+  }
+}
