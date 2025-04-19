@@ -1,14 +1,14 @@
 
 import './App.css'
 import 'inter-ui/inter.css';
-import FormPage from './projects/form/FormPage';
+import Form from './projects/freelance/components/Form';
 
 function App() {
   
 
   return (
     <>
-      <FormPage />
+      <Form />
     </>
   )
 }
