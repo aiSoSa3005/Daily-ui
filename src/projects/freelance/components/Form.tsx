@@ -15,12 +15,22 @@ const Form = () => {
       phone: "",
       type: "",
     },
-   validationSchema: Yup.object({
-      firstName: Yup.string().required("First name is required"),
-      lastName: Yup.string().required("Last name is required"),
-      jobTitle: Yup.string().required("Job title is required"),
-      email: Yup.string().email("Invalid email address").required("Email is required"),
-      phone: Yup.string().required("Phone number is required"),
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+        .min(2, "First name must be at least 2 characters")
+        .required("First name is required"),
+      lastName: Yup.string()
+        .min(2, "Last name must be at least 2 characters")
+        .required("Last name is required"),
+      jobTitle: Yup.string()
+        .min(2, "Job title must be at least 2 characters")
+        .required("Job title is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      phone: Yup.string()
+        .min(10, "Phone number must be at least 10 characters")
+        .required("Phone number is required"),
       type: Yup.string().required("User type is required"),
     }),
     onSubmit: (values) => {
